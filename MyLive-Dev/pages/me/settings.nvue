@@ -1,0 +1,125 @@
+<style>
+.page {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: #181b27;
+}
+
+.line {
+	height: 1rpx;
+	background-color: #393a41;
+	width: 750rpx;
+}
+
+.place-box {
+	background-color: #4a4c52;
+}
+.place-box-touched {
+	background-color: #6d6b6b;
+}
+
+.right-arrow {
+	width: 32rpx;
+	height: 32rpx;
+	margin-left: 20rpx;
+}
+
+.logout {
+	background-color: #4a4c52;
+}
+.logout-touched {
+	background-color: #6d6b6b;
+}
+.fengjianyingyue {
+	width: 250rpx;
+	border-width: 1rpx;
+	border-color: #FFFFFF;
+	border-radius: 10rpx;
+}
+.fengjianyingyue-name {
+	width: 200rpx;
+	margin-top: 26rpx;
+	opacity: 0.8;
+}
+.introduce {
+	color: #F1F1F1;
+	font-size: 26rpx;
+	font-weight: 300;
+	width: 440rpx;
+}
+.course {
+	width: 330rpx;
+	border-radius: 5px;
+}
+</style>
+<template>
+	<view class="page">		
+		<scroll-view scroll-y="true">
+			<view 
+				:class="{'logout':!logoutTouched, 'logout-touched': logoutTouched}" 
+				@touchstart="touchstartLogout()"
+				@touchend="touchendLogout()"
+				@click="logout()"
+				style="margin-top: 20rpx;padding-left: 30rpx;padding-right: 30rpx;width: 750rpx;height: 120rpx;display: flex;flex-direction: row;justify-content: center;">
+				
+				<text style="color: #FFFFFF;align-self: center;font-size: 15px;">退出登录</text>
+
+			</view>
+		</scroll-view>
+		
+	</view>
+</template>
+
+<script>
+	var app = getApp();
+	export default {
+		components: {
+		},
+		data() {
+			return {
+				logoutTouched: false
+			}
+		},
+		onLoad() {
+		},
+		methods: {
+			touchstartLogout() {
+				this.logoutTouched = true;
+			},
+			touchendLogout() {
+				this.logoutTouched = false;
+			},
+			logout() {
+				var me = this;
+				var userId = getApp().getUserInfoSession().id;
+				
+				var serverUrl = app.globalData.serverUrl;
+				uni.request({
+					method: "POST",
+					url: serverUrl + "/passport/logout?userId=" + userId,
+					success(result) {
+						var status = result.data.status;
+						if (status == 200) {
+							getApp().clearUserInfo();
+							uni.reLaunch({
+								url: "../index/index"
+							})
+						} else if (status != 200) {
+							uni.showToast({
+								title: result.data.msg,
+								icon: "none"
+							});
+						}
+						
+					}
+				});
+				
+				
+			}
+		}
+	}
+</script>
+
