@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.thrd.mapper.CommentMapper">
+  <resultMap id="BaseResultMap" type="com.example.thrd.pojo.Comment">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="vloger_id" jdbcType="VARCHAR" property="vloger_id" />
+    <result column="father_comment_id" jdbcType="VARCHAR" property="father_comment_id" />
+    <result column="vlog_id" jdbcType="VARCHAR" property="vlog_id" />
+    <result column="comment_user_id" jdbcType="VARCHAR" property="comment_user_id" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="like_counts" jdbcType="INTEGER" property="like_counts" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="com.tanz.thrd.pojo.Comment">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="vloger_id" jdbcType="VARCHAR" property="vloger_id" />
+    <result column="father_comment_id" jdbcType="VARCHAR" property="father_comment_id" />
+    <result column="vlog_id" jdbcType="VARCHAR" property="vlog_id" />
+    <result column="comment_user_id" jdbcType="VARCHAR" property="comment_user_id" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="like_counts" jdbcType="INTEGER" property="like_counts" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="com.tanz.thrd.pojo.Comment">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="vloger_id" jdbcType="VARCHAR" property="vloger_id" />
+    <result column="father_comment_id" jdbcType="VARCHAR" property="father_comment_id" />
+    <result column="vlog_id" jdbcType="VARCHAR" property="vlog_id" />
+    <result column="comment_user_id" jdbcType="VARCHAR" property="comment_user_id" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="like_counts" jdbcType="INTEGER" property="like_counts" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
+  </resultMap>
+</mapper>

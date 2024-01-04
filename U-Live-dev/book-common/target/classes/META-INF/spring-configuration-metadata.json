@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "aliyun.cloud",
+      "type": "com.tanz.utils.AliyunCloudProperties",
+      "sourceType": "com.tanz.utils.AliyunCloudProperties"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

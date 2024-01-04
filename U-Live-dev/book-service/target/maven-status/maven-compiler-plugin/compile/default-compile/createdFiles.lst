@@ -1,0 +1,12 @@
+com\tanz\service\CommentService.class
+com\tanz\service\impl\MsgServiceImpl.class
+com\tanz\service\MsgService.class
+com\tanz\service\impl\UserServiceImpl.class
+com\tanz\service\impl\CommentServiceImpl.class
+com\tanz\base\RabbitMQConfig.class
+com\tanz\service\impl\VlogServiceImpl.class
+com\tanz\service\VlogService.class
+com\tanz\base\BaseInfoProperties.class
+com\tanz\service\UserService.class
+com\tanz\service\FansService.class
+com\tanz\service\impl\FansServiceImpl.class

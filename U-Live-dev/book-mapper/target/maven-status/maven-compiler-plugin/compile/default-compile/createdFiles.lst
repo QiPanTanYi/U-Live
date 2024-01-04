@@ -1,0 +1,10 @@
+com\tanz\my\mapper\MyMapper.class
+com\tanz\mapper\FansMapperCustom.class
+com\tanz\mapper\CommentMapper.class
+com\tanz\mapper\MyLikedVlogMapper.class
+com\tanz\mapper\CommentMapperCustom.class
+com\tanz\repository\MessageRepository.class
+com\tanz\mapper\FansMapper.class
+com\tanz\mapper\VlogMapperCustom.class
+com\tanz\mapper\UsersMapper.class
+com\tanz\mapper\VlogMapper.class

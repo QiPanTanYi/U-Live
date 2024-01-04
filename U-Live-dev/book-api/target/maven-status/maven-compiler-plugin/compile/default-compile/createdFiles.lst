@@ -1,0 +1,13 @@
+com\tanz\controller\PassportController.class
+com\tanz\controller\FansController.class
+com\tanz\controller\VlogController.class
+com\tanz\intercepter\UserTokenInterceptor.class
+com\tanz\RabbitMQConsumer.class
+com\tanz\controller\UserInfoController.class
+com\tanz\controller\CommentController.class
+com\tanz\Application.class
+com\tanz\controller\MsgController.class
+com\tanz\intercepter\PassportInterceptor.class
+com\tanz\InterceptorConfig.class
+com\tanz\MinIOConfig.class
+com\tanz\Knife4jConfig.class
