@@ -11,10 +11,10 @@ import org.springframework.stereotype.Component;
 //@PropertySource("classpath:aliyuncloud.properties")
 @ConfigurationProperties(prefix = "aliyun.cloud")
 public class AliyunCloudProperties {
-    private final String accessKeyId = "LTAI5tBwdjy34WpyRXumfyp7";
-    private final String accessKeySecret = "3u3g53xvEkISFodGny8GwVSweH6kuR";
-    private final String templateCode = "SMS_463785094";
-    private final String signName = "陈培鑫的博客";
+    private final String accessKeyId = "LTAI5tBwdjy34WpyRX??????";
+    private final String accessKeySecret = "3u3g53xvEkISFodGny8GwVSw??????";
+    private final String templateCode = "SMS_463??????";
+    private final String signName = "??????";
 
 //    private String accessKeyId;
 //    private String accessKeySecret;
