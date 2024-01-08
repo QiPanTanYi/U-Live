@@ -18,7 +18,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="U-Live" options="" />
+      <module name="U-Live" options="-parameters" />
       <module name="U-Live-dev" options="" />
       <module name="book-api" options="-parameters" />
       <module name="book-common" options="-parameters" />

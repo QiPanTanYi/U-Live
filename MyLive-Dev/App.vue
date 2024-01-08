@@ -4,8 +4,8 @@
 	import districtList from './json/area_district.js';
 	export default {
 		globalData: {  
-			// serverUrl: "http://192.168.137.146:8099",		// 开发测试环境，禁止写localhost，会出问题
-			serverUrl: "http://47.98.124.227",					// 服务器环境
+			// serverUrl: "http://192.168.XXX.XXX:8099",		// 开发测试环境，禁止写localhost，会出问题
+			serverUrl: "http://47.98.XXX.XXX",					// 服务器环境
 			
 			provinceList: provinceList,
 			cityList: cityList,

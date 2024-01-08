@@ -4,6 +4,6 @@ spring:
   cloud:
     nacos:
       config:
-        server-addr: 172.26.35.79:8848   # nacos 所在的地址
-#        server-addr: 47.98.124.227:8848
+        server-addr: 172.26.XX.XX:8848   # nacos 所在的地址
+#        server-addr: 47.98.XXX.XXX:8848
         file-extension: yaml

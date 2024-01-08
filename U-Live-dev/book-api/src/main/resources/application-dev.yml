@@ -18,16 +18,16 @@ spring:
       max-lifetime: 18000000                  # 连接池的最大生命时长（毫秒），超时则会被释放（retired）
       connection-test-query: SELECT 1
   redis:
-    host: 47.98.124.227
+    host: 47.98.XXX.XXX
     port: 6397
     database: 1
     password: 123456
   data:
     mongodb:
-      uri: mongodb://root:root@47.98.124.227:27017
+      uri: mongodb://root:root@47.98.XXX.XXX:27017
       database: u-live-dev
   rabbitmq:
-    host: 47.98.124.227
+    host: 47.98.XXX.XXX
     port: 5672
     username: admin
     password: admin
@@ -35,7 +35,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 47.98.124.227:8848   # nacos 所在的地址
+        server-addr: 47.98.XXX.XXX:8848   # nacos 所在的地址
 #        counts: 1
 # 打开监控
 management:
@@ -46,8 +46,8 @@ management:
 
 # MinIO 配置
 minio:
-  endpoint: http://47.98.124.227:9000/      # MinIO服务地址
-  fileHost: http://47.98.124.227:9000/      # 文件地址host
+  endpoint: http://47.98.XXX.XXX:9000/      # MinIO服务地址
+  fileHost: http://47.98.XXX.XXX:9000/      # 文件地址host
   bucketName: u-live                      # 存储桶bucket名称
   accessKey: tanz                         # 用户名
   secretKey: tanz123456                     # 密码
