@@ -179,28 +179,68 @@
 #### 部署＆启动
 
 ```shell
-# Nginx 配置
+# Nginx 配置-/usr/local/nginx/conf/nginx.conf
+#user  nobody;
+worker_processes  2;
+
+#error_log  logs/error.log;
+#error_log  logs/error.log  notice;
+#error_log  logs/error.log  info;
+#pid        logs/nginx.pid;
+
+events {
+    worker_connections  10240;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    #tcp_nopush     on;
+    keepalive_timeout  65;
+    #gzip  on;
     # 配置上游服务器
-   upstream www.bookapi.com {
+    upstream www.bookapi.com {
 	server 172.26.XX.XX:8099;
 	server 172.26.XX.XX:8089;
-   }
+    }
     # 配置网关（入口）
     server {
-        listen       8000;
+        listen       80;
         server_name  localhost;
 
        location / {
            proxy_pass http://www.bookapi.com; 
 	}
 }
+
+    server {
+        listen       801;
+        server_name  localhost;
+
+
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+
+    }
+}
 ```
 
 ```shell
 # PS：这些组件都是部署在CentOS 7.6中的，需要逐个启动服务
-启动MySQL: /etc/init.d/mysqld start
+关闭防火墙:systemctl stop firewalld   systemctl disable firewalld
 
-启动MongoDB: (cd /usr/local/mongoDB) mongod -f mongodb.conf 
+启动MySQL: /etc/init.d/mysqld start 
+(推荐使用systemctl start mysql)
+
+启动MongoDB: (cd /usr/local/mongodb) mongod -f mongodb.conf 
 
 启动 RabbitMQ:(rabbitmq-plugins enable rabbitmq_management）
 			  service rabbitmq-server start
