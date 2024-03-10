@@ -19,10 +19,10 @@ public class Knife4jConfig {
         Docket docket=new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(new ApiInfoBuilder()
                         .description("U-Live短视频平台接口开发文档")
-                        .termsOfServiceUrl("http://47.98.124.227:8099")
-                        .contact(new Contact("tanz",
-                                "http://47.98.124.227:8099",
-                                "t1748617439@163.com"))
+                        .termsOfServiceUrl("http://47.98.xxx.xxx:8099")
+                        .contact(new Contact("Tanz",
+                                "http://47.98.xxx.xxx:8099",
+                                "t1748XXXXXX@163.com"))
                         .version("1.0")
                         .build())
                 //分组名称
